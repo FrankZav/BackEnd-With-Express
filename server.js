@@ -6,7 +6,7 @@ const app = express();
 
 app.use(bodyParser.urlencoded({extended: true}));
 
-MongoClient.connect('mongodb://Frank:lakers16@ds159661.mlab.com:59661/name-score',{useNewUrlParser: true}, (err, client)=>{
+MongoClient.connect('<mongo url>',{useNewUrlParser: true}, (err, client)=>{
 	if (err) return console.log(err);
 	db = client.db('name-score');
 	app.listen(3000, ()=>{
